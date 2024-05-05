@@ -1,0 +1,29 @@
+CREATE TABLE budget_category (
+    budget_id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    amount INT 
+);
+
+CREATE TABLE expense (
+    expense_id SERIAL PRIMARY KEY,
+    category VARCHAR(255),
+    email VARCHAR(255),
+    date BIGINT NOT NULL,
+    expense_name VARCHAR(255),
+    expense_amount INT NOT NULL
+);
+
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    fullname VARCHAR(255),
+    avatar VARCHAR(500),
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
+ALTER TABLE budget_category
+RENAME COLUMN id TO budget_id;
+
+ALTER TABLE expense
+ALTER COLUMN date TYPE BIGINT;
