@@ -29,7 +29,10 @@ pool
 // MIDDLEWARES
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: 'https://expense-tracker-client-z102.onrender.com',
+    credentials: true
+}))
 app.use(cookieParser())
 
 // ROUTES
