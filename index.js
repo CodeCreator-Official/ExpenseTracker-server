@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import pg from 'pg';
 dotenv.config()
-import cors from 'cors'
+import cors from 'cors' 
 import userRoute from './routes/user.routes.js';
 import cookieParser from 'cookie-parser';
 import categoryRoute from './routes/category.routes.js';

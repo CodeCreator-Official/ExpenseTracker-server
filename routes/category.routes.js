@@ -4,7 +4,7 @@ import {
     handleCreateCategory,
     handleGetCategory
 } from '../controllers/category.controller.js';
-const categoryRoute = express.Router();
+const categoryRoute = express.Router(); 
 
 categoryRoute.post('/', handleAuth, handleCreateCategory)
 categoryRoute.get('/', handleAuth, handleGetCategory)

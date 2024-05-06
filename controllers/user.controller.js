@@ -91,8 +91,6 @@ export async function handleLogin(req, res) {
             process.env.COOKIE_TOKEN_KEY
         )
 
-        console.log(cookie)
-
         return res
             .cookie('userCookie', cookie, cookieOptions)
             .json({
