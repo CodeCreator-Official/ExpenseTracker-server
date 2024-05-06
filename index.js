@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import pg from 'pg';
 dotenv.config()
-import cors from 'cors' 
+import cors from 'cors'
 import userRoute from './routes/user.routes.js';
 import cookieParser from 'cookie-parser';
 import categoryRoute from './routes/category.routes.js';
@@ -33,6 +33,9 @@ app.use(cors({}))
 app.use(cookieParser())
 
 // ROUTES
+app.get('/', (req, res) => {
+    res.end('Hello World')
+})
 app.use('/auth', userRoute)
 app.use('/category', categoryRoute)
 app.use('/expense', expenseRoute)
