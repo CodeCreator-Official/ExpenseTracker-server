@@ -30,7 +30,7 @@ pool
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors({
-    origin: 'https://expense-tracker-client-z102.onrender.com',
+    origin: ['http://localhost:5173', 'https://expense-tracker-client-z102.onrender.com'],
     credentials: true
 }))
 app.use(cookieParser())
